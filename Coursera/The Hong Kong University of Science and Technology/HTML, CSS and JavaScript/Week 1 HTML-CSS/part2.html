@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+	<html lang="en">
+    <meta charset="utf-8">
+    <title>Assignment Week 1</title>
+    <style>
+    	fieldset {
+    		background: lightyellow;
+    		border:10px solid yellow;
+    		margin-bottom: 10px;
+    		width: 720px;    		
+    	}
+    	label {
+    		width: 180px;
+    		display: inline-block;
+    		text-align: right;
+    		vertical-align: top;
+    	}
+
+    	#radio, #checkbox {
+    		width: auto;
+    	}
+    	.range {
+    		text-align:center;
+    		
+    	}
+    	textarea {
+    		width:360px;
+    		height:50px;
+    	}
+    	
+    </style>
+</head>
+<body>
+	<form>
+
+		<fieldset action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data" >
+			<legend>Your Face</legend>
+			<label for="avatar">Your image:</label>
+			<input type="file" name="fileToUpload" required>
+			<br>
+			<label for="image-preview">Image preview:</label>			
+			<img src="#" id="preview">
+		</fieldset>
+
+		<fieldset>
+			<legend>Your General Details</legend>
+			<label for="name">Name:</label><input type="text" name="firstName" placeholder="Your full name" required><br>
+			<label for="gender">Gender:</label>
+			<input class="radio" type="radio" name="Gender" value="male" required>Male
+			<input class="radio" type="radio" name="Gender" value="female">Female<br>			
+			<label for="age">Age:</label>
+			<input type="number" required><br>
+			<label for="date-of-birth">Date of birth:</label>
+			<input type="date"><br>
+			<label for="color">Favorite color:</label>
+			<input type="color"><br>
+			<label for="which-country">Which country:</label>			 
+				<select name="select">
+    			<option>No selection</option>
+                <option>China</option>
+                <option>Germany</option>
+                <option>France</option>
+                <option>Ukraine</option>
+                <option>USA</option>
+               	</select>
+		</fieldset>
+
+		<fieldset>
+			<legend>Your Indicators</legend>
+			<label for="height">Height:</label>
+			<div class="range">Short<input type="range" min="0" max="100" step="1" value="50">Tall</div><br>
+			<label for="salary">Salary:</label>
+			<div class="range">Poor<input type="range" min="0" max="100" step="1" value="50">Rich</div>
+
+
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Your Contact Information</legend>
+
+			<label for="e-mail">Email:</label>
+			<input type="email" required><br>
+			<label for="mobile">Mobile:</label>
+			<input type="tel"><br>
+			<label for="adsress">Address:</label>
+			<textarea type="text"></textarea><br>
+			<label id="checkbox" for="contact-method">Method to contact you:</label>
+			<input type="checkbox" name="e-mail" value="email">Email<input type="checkbox" name="whatsapp" value="whatsapp">Whatsapp<input type="checkbox" name="in-app-chat" value="in-app-chat">In-app chat
+		</fieldset>		
+	</form>
+	<input type="submit" value="Submit">
+</body>
